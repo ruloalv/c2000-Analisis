@@ -1,0 +1,60 @@
+/* Define el estilo general para el cuerpo de la página. */
+body {
+    font-family: Arial, sans-serif;
+    /* Define la fuente del texto. */
+    margin: 0;
+    /* Elimina el margen predeterminado del navegador. */
+    display: flex;
+    /* Hace que el cuerpo se muestre como un contenedor flexible. */
+    background-color: #EFEFEF;
+    /* Color de fondo gris claro. */
+}
+
+/* Estilos para el encabezado de la página. */
+header {
+    background-color: #FFA500;
+    /* Color de fondo naranja. */
+    padding: 10px;
+    /* Espaciado interno alrededor del contenido. */
+    color: white;
+    /* Color del texto. */
+    text-align: center;
+    /* Centra el texto en el encabezado. */
+}
+
+/* Estilos para el menú lateral (aside). */
+aside {
+    width: 200px;
+    /* Define el ancho del menú lateral. */
+    background-color: #333333;
+    /* Color de fondo gris oscuro. */
+    padding: 15px;
+    /* Espaciado interno alrededor del contenido. */
+}
+
+/* Elimina el estilo de lista predeterminado para el menú. */
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Espaciado entre los elementos de la lista. */
+aside ul li {
+    margin: 10px 0;
+}
+
+/* Estilos para los enlaces en el menú. */
+aside ul li a {
+    color: #FFFFFF;
+    /* Color del texto de los enlaces en el menú. */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces. */
+}
+
+/* Estilos para la sección principal (main). */
+main {
+    padding: 20px;
+    /* Espaciado interno alrededor del contenido principal. */
+    flex-grow: 1;
+    /* Permite que el contenido principal ocupe el espacio restante. */
+}
