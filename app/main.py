@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from routers import proveedor
 # from fastapi.staticfiles import StaticFiles
 # from fastapi.templating import Jinja2Templates
 # from starlette.requests import Request
@@ -18,6 +19,9 @@ app = FastAPI()
 # async def home(request: Request):
 #     return templates.TemplateResponse("base.html", {"request": request})
 
+#Routers
+app.include_router(proveedor.router)
+
 @app.get("/")
 async def root():
-    return ("hello c2000")
+    return ("Hola root")
