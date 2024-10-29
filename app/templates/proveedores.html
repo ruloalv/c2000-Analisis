@@ -3,10 +3,21 @@
 {% block content %}
 <h2>Lista de Proveedores</h2>
 <div id="proveedores-container">
-    {% for proveedor in proveedores %}
-        <p>Nombre: {{ proveedor.name }}</p>
-        <p>Ubicacion: {{ proveedor.location }}</p>
-        <hr>
-    {% endfor %}
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Ubicación</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for proveedor in proveedores %}
+            <tr>
+                <td>{{ proveedor.name }}</td>
+                <td>{{ proveedor.location }}</td>
+            </tr>                
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 {% endblock %}

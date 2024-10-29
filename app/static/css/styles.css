@@ -115,3 +115,44 @@ header {
 main {
     margin: 2rem;
 }
+
+/* TABLAS */
+/* Estilo de la tabla */
+table {
+    width: 100%; /* Ancho completo de la sección */
+    border-collapse: collapse; /* Elimina el espacio entre bordes de celdas */
+    margin-top: 20px;
+}
+
+/* Estilo de bordes */
+table, th, td {
+    border: 1px solid #ccc; /* Bordes grises claros */
+}
+
+/* Espaciado dentro de celdas */
+th, td {
+    padding: 12px; /* Espacio entre texto y bordes */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+/* Encabezado de la tabla */
+thead th {
+    background-color: #718F94; /* Color de fondo del encabezado */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Alineación central en encabezados */
+}
+
+/* Color alternado en filas */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo para filas pares */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Color de fondo para filas impares */
+}
+
+/* Estilo al pasar el cursor */
+tbody tr:hover {
+    background-color: #ffe3a1; /* Cambia el fondo al pasar el mouse */
+}
