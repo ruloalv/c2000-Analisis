@@ -10,8 +10,25 @@
     <header>
       <h1>Bienvenido al Análisis de Precios</h1>
     </header>
-    <main>
-      <p>Esta es la plantilla base de Jinja2 para el proyecto.</p>
-    </main>
+    <div id="container">
+      <aside>
+        <div class="menu">
+          <button class="menu-button" onclick="toggleSubMenu('submenu-datos')">Datos</button>
+          <div id="submenu-datos" class="submenu">
+            <a HREF="proveedores/" class="submenu-link">Proveedores</a>
+            <a HREF="#materiales" class="submenu-link">Materiales</a>
+            <a HREF="#jornales" class="submenu-link">Jornales</a>
+            <a HREF="#transporte" class="submenu-link">Transporte</a>
+            <a HREF="#maquinaria" class="submenu-link">Maquinaria</a>
+          </div>
+          <button class="menu-button" onclick="toggleSubMenu('submenu-items')">Items</button>
+          <button class="menu-button" onclick="toggleSubMenu('submenu-resumen')">Resumen</button>
+        </div>
+      </aside>
+      <main>
+        {% block content %} {% endblock %}
+      </main>
+    </div>
+    <script src="/static/js/base.js"></script>
   </body>
 </html>

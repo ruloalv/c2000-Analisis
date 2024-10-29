@@ -1,0 +1,12 @@
+<!-- templates/proveedores.html -->
+{% extends "base.html" %}
+{% block content %}
+<h2>Lista de Proveedores</h2>
+<div id="proveedores-container">
+    {% for proveedor in proveedores %}
+        <p>Nombre: {{ proveedor.name }}</p>
+        <p>Ubicacion: {{ proveedor.location }}</p>
+        <hr>
+    {% endfor %}
+</div>
+{% endblock %}

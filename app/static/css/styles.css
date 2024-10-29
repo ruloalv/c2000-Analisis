@@ -6,8 +6,14 @@ body {
     /* Elimina el margen predeterminado del navegador. */
     display: flex;
     /* Hace que el cuerpo se muestre como un contenedor flexible. */
+    flex-direction: column;
     background-color: #EFEFEF;
     /* Color de fondo gris claro. */
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
 }
 
 /* Estilos para el encabezado de la página. */
@@ -26,10 +32,46 @@ header {
 aside {
     width: 200px;
     /* Define el ancho del menú lateral. */
+    height: 100vh;
     background-color: #333333;
     /* Color de fondo gris oscuro. */
     padding: 15px;
     /* Espaciado interno alrededor del contenido. */
+    color:#FFFFFF;
+}
+
+.menu-button {
+    width: 100%;
+    background-color: #FFA500;
+    color: white;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu-button:hover {
+    background-color: #FF8C00;
+}
+
+/* Submenú oculto */
+.submenu {
+    display: none;
+    background-color: #718F94;
+    margin-top: 5px;
+}
+
+.submenu a {
+    display: block;
+    color: #FFFFFF;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.submenu a:hover {
+    background-color: #95818D;
 }
 
 /* Elimina el estilo de lista predeterminado para el menú. */
