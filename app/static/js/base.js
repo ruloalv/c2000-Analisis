@@ -4,21 +4,10 @@ function toggleSubMenu(submenuId) {
     submenu.style.display = submenu.style.display === 'none' || submenu.style.display === '' ? 'block' : 'none';
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     // Obtener elementos del menú
-//     const submenuLinks = document.querySelectorAll(".submenu-link");
-
-//     submenuLinks.forEach(link => {
-//         link.addEventListener("click", function (event) {
-//             event.preventDefault();
-//             const url = event.target.getAttribute("href");
-
-//             fetch(url)
-//                 .then(response => response.text())
-//                 .then(data => {
-//                     document.getElementById("main-content").innerHTML = data;
-//                 })
-//                 .catch(error => console.error("Error al cargar el contenido:", error));
-//         });
-//     });
-// });
+//Muestra el formulario vacío para agregar un nuevo proveedor
+function showFormNewProveedor() {
+    document.getElementById("name").value = "";         // Limpia el campo de nombre
+    document.getElementById("location").value = "";     // Limpia el campo de ubicación
+    addForm = document.getElementById("add-form")
+    addForm.style.display = addForm.style.display === "none" ? "block" : "none";  // Muestra el formulario
+  };

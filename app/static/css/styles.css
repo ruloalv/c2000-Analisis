@@ -74,6 +74,10 @@ aside {
     background-color: #95818D;
 }
 
+.submenu.open {
+    display: block;
+}
+
 /* Elimina el estilo de lista predeterminado para el menú. */
 aside ul {
     list-style-type: none;
@@ -155,4 +159,23 @@ tbody tr:nth-child(odd) {
 /* Estilo al pasar el cursor */
 tbody tr:hover {
     background-color: #ffe3a1; /* Cambia el fondo al pasar el mouse */
+}
+
+#add-button {
+    padding: 10px;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Hace que el botón ocupe el ancho completo de la celda */
+}
+
+#add-form {
+    padding: 10px;
+    border: 1px solid #718F94;
+    background-color: #f9f9f9;
+}
+
+#add-form input {
+    margin-right: 10px;
 }

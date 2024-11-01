@@ -19,4 +19,6 @@ proveedores_list = [Proveedor(id=1, name="Trafigura", location="Bahia Blanca"),
 
 @router.get("/", response_class=HTMLResponse)
 async def obtener_proveedores(request: Request):
-    return templates.TemplateResponse("proveedores.html", {"request": request, "proveedores":proveedores_list})
+    return templates.TemplateResponse(
+        "proveedores.html",
+        {"request": request, "proveedores":proveedores_list, "submenu_open": True})

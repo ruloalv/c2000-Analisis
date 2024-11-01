@@ -14,12 +14,12 @@
       <aside>
         <div class="menu">
           <button class="menu-button" onclick="toggleSubMenu('submenu-datos')">Datos</button>
-          <div id="submenu-datos" class="submenu">
-            <a HREF="proveedores/" class="submenu-link">Proveedores</a>
-            <a HREF="#materiales" class="submenu-link">Materiales</a>
-            <a HREF="#jornales" class="submenu-link">Jornales</a>
-            <a HREF="#transporte" class="submenu-link">Transporte</a>
-            <a HREF="#maquinaria" class="submenu-link">Maquinaria</a>
+          <div id="submenu-datos" class="submenu {% if submenu_open %}open{% endif %}" >
+            <a href="/proveedores/" class="submenu-link">Proveedores</a>
+            <a href="#materiales" class="submenu-link">Materiales</a>
+            <a href="#jornales" class="submenu-link">Jornales</a>
+            <a href="#transporte" class="submenu-link">Transporte</a>
+            <a href="#maquinaria" class="submenu-link">Maquinaria</a>
           </div>
           <button class="menu-button" onclick="toggleSubMenu('submenu-items')">Items</button>
           <button class="menu-button" onclick="toggleSubMenu('submenu-resumen')">Resumen</button>

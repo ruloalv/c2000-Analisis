@@ -2,12 +2,15 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Lista de Proveedores</h2>
+
+<!-- Tabla de proveedores -->
 <div id="proveedores-container">
     <table>
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Ubicación</th>
+                <th> Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -15,9 +18,29 @@
             <tr>
                 <td>{{ proveedor.name }}</td>
                 <td>{{ proveedor.location }}</td>
+                <td>
+                    <button onclick="editProveedor(proveedor.id)">Editar</button>
+                    <button onclick="deleteProveedor(proveedor.id)">Eliminar</button>
+                </td>
             </tr>                
             {% endfor %}
+    <!-- Fila para agregar nuevo proveedor -->
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <button id="add-button" onclick="showFormNewProveedor()">Agregar nuevo proveedor</button>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
+
+<!-- Formulario para agregar proveedores (inicialmente oculto) -->
+<form id="add-form" style="display: none; margin-top: 10px;">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name">
+    <label for="location">Ubicación:</label>
+    <input type="text" id="location" name="location">
+    <button type="submit">Guardar</button>
+</form>
+
 {% endblock %}
