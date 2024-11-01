@@ -46,3 +46,9 @@ templates = Jinja2Templates(directory="app/templates")
 async def home(request: Request):
     return templates.TemplateResponse("base.html", {"request": request})
 ```
+# source .env/bin/activate
+# Inicia el server: uvicorn main:app --reload
+# Detener Server Ctrl + C
+# deactivate
+# Documentación con Swagger: http://127.0.0.1:8000/docs
+# Documentación con Redocly: http://127.0.0.1:8000/redoc
