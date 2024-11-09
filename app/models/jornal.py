@@ -2,7 +2,7 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 Base = declarative_base
@@ -13,8 +13,7 @@ class Jornal(Base):
     id = Column(Integer, primary_key=True, index=True)
     categoria = Column(String(100), nullable=False)
     jornal_actual = Column(Float, nullable=False)
-    fecha_inicio = Column(DateTime, default=datetime.now(datetime.timezone.utc))  # Podrías considerar una relación o JSON para esto
-
+    fecha_inicio = Column(DateTime, default=datetime.now(tz=timezone.utc))  # Podrías considerar una relación
     historial_salarios = relationship("HistorialSalario", back_populates="jornal")
 
     def __repr__(self):
@@ -26,7 +25,7 @@ class HistorialSalario(Base):
     id = Column(Integer, primary_key=True)
     jornal_id = Column(Integer, ForeignKey('jornal.id'), nullable=False)
     importe = Column(Float, nullable=False)  # El salario antiguo
-    fecha_inicio = Column(DateTime, default=datetime.now(datetime.timezone.utc))  # Fecha en que comenzó el salario antiguo
+    fecha_inicio = Column(DateTime, default=datetime.now(tz=timezone.utc))  # Fecha en que comenzó el salario antiguo
     fecha_fin = Column(DateTime, nullable=True)  # Fecha en que terminó ese salario (si aplica)
 
     # Relación con la tabla Personal

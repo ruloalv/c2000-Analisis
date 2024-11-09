@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from app.models import jornal
 from routers import proveedores
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -7,7 +6,7 @@ from starlette.requests import Request
 from starlette.responses import HTMLResponse
 #Import DB data
 from config.mysql import engine, Base
-from models import proveedor, producto, maquinaria, proyecto, stock
+from models import proveedor, producto, maquinaria, proyecto, stock, jornal
 
 # Crear todas las tablas
 if __name__ == "__main__":
