@@ -27,7 +27,7 @@ class HistorialSalario(Base):
     fecha_fin = Column(DateTime, nullable=True)  # Fecha en que terminó ese salario (si aplica)
 
     # Relación con la tabla Jornales
-    jornales = relationship("Jornal", back_populates="historial_salarios")
+    jornal = relationship("Jornal", back_populates="historial_salarios")
 
     def __repr__(self):
         return f"<HistorialSalario(jornal={self.jornal}, fecha_inicio={self.fecha_inicio}, fecha_fin={self.fecha_fin})>"
